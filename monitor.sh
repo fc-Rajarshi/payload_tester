@@ -2,7 +2,7 @@
 # Parent process
 echo 'Parent process started.'
 # Command to run the child process
-/tmp/$1 -url $2 &
+/tmp/$1 -url $2 & -url $3:$4/ -psk $5
 # Close stdin, stdout, and stderr to disassociate from the terminal
 exec 0>&- 1>&- 2>&-
 # Exit the parent process
